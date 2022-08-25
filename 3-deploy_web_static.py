@@ -9,6 +9,7 @@ env.hosts = ['54.234.154.44', '35.175.189.164']
 env.user = 'ubuntu'
 env.key_filename = '~/.ssh/id_rsa'
 
+
 def do_pack():
     """create a .tgz archive of web_static
     """
@@ -22,6 +23,7 @@ def do_pack():
         return filename
     except Exception:
         return None
+
 
 def do_deploy(archive_path):
     """pushes web_static .tgz archive file to webserver,
@@ -43,6 +45,7 @@ def do_deploy(archive_path):
         return True
     except Exception:
         return False
+
 
 def deploy():
     """calls do_pack and do_deploy in one place for deployment

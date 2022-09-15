@@ -41,7 +41,7 @@ def rendering(n):
     """displays a template if n is an int"""
     return render_template(
         "5-number.html",
-        insert="{} is a number".format(n)
+        insert="Number: {}".format(n)
     )
 
 

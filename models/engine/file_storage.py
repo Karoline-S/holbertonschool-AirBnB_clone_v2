@@ -64,3 +64,7 @@ class FileStorage:
                 del self.__objects[obj_key]
         else:
             pass
+
+    def close(self):
+        """calls reload to restore objects from file storage"""
+        self.reload()

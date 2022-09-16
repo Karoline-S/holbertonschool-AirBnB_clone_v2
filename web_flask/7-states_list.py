@@ -12,6 +12,7 @@ def close_session(exception=None):
     """closes the sqlalchemy session"""
     storage.close()
 
+
 @app.route("/states_list", strict_slashes=False)
 def show_states():
     """retrieve States from storage and show in html page"""

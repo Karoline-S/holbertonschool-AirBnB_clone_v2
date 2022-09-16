@@ -45,10 +45,6 @@ class DBStorage:
             delete = [k for k, v in objects_list.items() if v != cls]
             for k in delete:
                 del objects_list[k]
-#            for k, v in objects_list.items():
-                
-#                if v != cls:
-#                    objects_list.pop(k)
         for cls in objects_list:
             result = self.__session.query(objects_list[cls]).all()
             for obj in result:

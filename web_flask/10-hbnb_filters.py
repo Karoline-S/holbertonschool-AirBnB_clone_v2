@@ -16,7 +16,6 @@ def close_session(exception=None):
 @app.route("/hbnb_filters", strict_slashes=False)
 def show_states_cities_amenities():
     """retrieve States from storage and show in html page"""
-
     return render_template(
         "10-hbnb_filters.html",
         dict_states=storage.all(State),
